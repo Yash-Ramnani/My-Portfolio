@@ -20,7 +20,7 @@ async function sendMessage() {
   showTypingIndicator();
 
   try {
-    const res = await fetch('/chat', {
+    const res = await fetch('https://tez-backend-zxzm.onrender.com/chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ message })
@@ -109,4 +109,5 @@ var typed = new Typed('#element', {
     strings: ['FULL STACK DEVELOPER.', 'WEB DEVELOPER.', 'AI ENTHUSIAST.', 'TECH LOVER.'],
     loop: true,
     typeSpeed: 100,
+
   });
