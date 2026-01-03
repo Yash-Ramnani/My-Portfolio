@@ -1,0 +1,211 @@
+#send-btn{
+
+  width: 25%;
+}
+
+#clear-btn{
+
+  width: 25%;
+}
+
+.ai-button,.social-button {
+  border: none;
+  outline: none;
+  color: #FFF;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
+}
+.ai-button::after, .social-button::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #212529;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+/* glow for ai */
+.ai-button::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff1919,#eb9a3e,#78fc5b,
+    #34f0ae,#3affe5,#0033ff,
+    #9900ff,#ff00dd,#ff008c,#ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+  border-radius: 10px;
+  opacity: 1;  
+}
+
+/* glow for skill */
+.social-button::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #193fff,#3ea9eb,#5bdcfc,
+    #76f034,#0eff5e,#00ffbf
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  opacity: 0;  
+}
+
+
+
+
+@keyframes glowing {
+  0% {background-position: 0 0;}
+  50% {background-position: 400% 0;}
+  100% {background-position: 0 0;}
+}
+
+/* hover */
+.social-button:hover::before {
+  opacity: 1;
+}
+
+.ai-button:hover{
+  color: white;
+}
+
+.social-button:hover{
+  color: white;
+}
+
+.ai-button:active:after {
+  background: transparent;
+}
+
+.ai-button:active {
+  color: #000;
+  font-weight: bold;
+}
+
+.social-button:active:after {
+  background: transparent;
+}
+
+.social-button:active {
+  color: #000;
+  font-weight: bold;
+}
+    
+
+  /* COMMON BUTTON STYLE */
+  .skill-btn {
+      font-size: 250%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    transition: 0.3s ease-in-out;
+  }
+
+  .skill-btn:hover {
+      font-size: 350%;
+  }
+
+  .skills {
+    font-size: 270%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    transition: 0.3s ease-in-out;
+  }
+
+  /* Circular placement */
+  .btn-skills { top: -5%; left: 55%; }
+  .btn-python   { top: 8%; left: 55%; }
+  .btn-html     { top: 21%; left: 85%; }
+  .btn-css      { top: 38%; left: 10%; }
+  .btn-bootstrap{ top: 21%; left: 25%; }
+  .btn-java     { top: 56%; left: 0%; }
+
+  
+
+
+
+.has-tooltip {
+position: relative; /* only this inner span is relative */
+display: inline-block;
+}
+
+.has-tooltip .tooltip {
+position: absolute;
+bottom: 100%;
+left: 50%;
+transform: translateX(-50%) translateY(10px);
+
+margin-bottom: 10px;
+padding: 0.55rem 1rem;
+font-size: 0.9rem;
+font-weight: 500;
+white-space: nowrap;
+
+color: #fff;
+background-color: #000;
+border-radius: 50px;
+box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1),
+            0 5px 15px rgba(0, 0, 0, 0.07);
+
+pointer-events: none;
+user-select: none;
+
+opacity: 0;
+transition: opacity 0.2s ease-in-out,
+            transform 0.2s ease-in-out;
+}
+
+.has-tooltip:hover .tooltip {
+opacity: 0.9;
+transform: translateX(-50%) translateY(0);
+}
+
+
+.about-actions {
+  margin-top: 35px;
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+/* Base button */
+.about-btn {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #00e5ff;
+  border-color: #00e5ff;
+}
+
+.about-btn:hover {
+  background: #00e5ff;
+  color: #000;
+}
+

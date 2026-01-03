@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yash Portfolio</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="Portfolio.css">
+  <link rel="stylesheet" href="butttons.css">
+  <link rel="stylesheet" href="images.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+  <!-- Custom JS -->
+  
+
+  <!-- Icon bundle -->
+  <script src="https://kit.fontawesome.com/0a2a520a6b.js" crossorigin="anonymous"></script>
+
+  <!-- Typing js-->
+   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    
+</head>
+
+<body>
+
+<!-- Navigation bar -->
+<nav class="navbar navbar-dark bg-dark" id="home">
+    
+  <div class="container-fluid" >
+
+    <button class="btn btn-lg ai-button" id="ai" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+      <i class="fa-solid fa-robot"></i> My Ai
+    </button>
+
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+    
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Tezas.io 🗿</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" id="close"></button>
+      </div>
+  
+      <div class="offcanvas-body">
+        <div class="chat-container">
+          
+          <div id="chat-box" class="chat-box"></div>
+          <div id="typing-indicator" class="typing-indicator" style="display: none;">Tez is typing...</div>
+          
+          <div class="input-area">
+                
+            <input type="text" id="user-input" placeholder="Type your message here..." />
+            <button id="send-btn" class="btn btn-outline-dark">Send</button>
+            <button id="clear-btn" class="btn btn-outline-danger btn-sm ms-2">Clear</button>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center d-flex">
+      <a href="Portfolio.html" class="text-decoration-none">
+        <h2 class="text-white main-heading  disabled-text ">MY PORTFOLIO</h2>
+      </a>
+    </div>
+
+    <div class="text-end d-flex gap-3">
+          
+     <!-- Contact Button -->
+      <button class="btn btn-dark social-button" data-bs-toggle="modal" data-bs-target="#contactModal" id="contact">
+        <i class="fa-solid fa-user me-2"></i>Contact
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content contact-modal">
+
+            <!-- Header -->
+            <div class="modal-header border-0 justify-content-center position-relative">
+              <h4 class="modal-title fw-bold">Let’s Work Together 🤝</h4>
+              <button type="button" class="btn-close position-absolute end-0 me-3"
+                      data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body text-center px-4">
+              <p class="subtitle">
+                Open to internships, freelance work, and entry-level web development roles.
+              </p>
+
+              <div class="contact-info">
+                <p>
+                  <a href="tel:+918780486871">📞Contact: +91 8780486871</a>
+                </p>
+                <p>
+                <a href="mailto:ramnaniyash32@gmail.com"> ✉️ E-mail: ramnaniyash32@gmail.com</a>
+                </p>
+              </div>
+
+              <div class="location">
+                📍 India · <span>Open to remote opportunities</span>
+              </div>
+
+              <small class="response-time">
+                Usually responds within 24 hours
+              </small>
+            </div>
+
+            <!-- Footer -->
+            <div class="modal-footer border-0 justify-content-center gap-3 pb-4">
+
+              <a href="mailto:ramnaniyash32@gmail.com" class="btn btn-outline-danger email">
+                E-mail Me
+              </a>
+
+              <a href="https://wa.me/918780486871" target="_blank" class="btn btn-outline-success whatsapp">
+                WhatsApp Me
+              </a>
+
+              <a href="assets/Yash_Ramnani_Resume.pdf"
+                download="pdf"
+                class="btn btn-outline-dark resume" target="_blank">
+                Resume
+              </a>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <a href="https://linkedin.com/in/yash-ramnani" target="_blank">
+        <button id="signup" class="btn btn-dark social-button">
+          <i class="fa-brands fa-linkedin"></i>Linkedin
+        </button>
+      </a>
+
+      <a href="https://github.com/Yash-Ramnani" target="_blank" >
+        <button id="login" class="btn btn-dark social-button">
+          <i class="fa-brands fa-github"></i>  Github
+        </button>
+      </a>
+
+    </div>
+  </div>
+  
+</nav>
+
+<!-- Second Nav Bar -->
+<div class="nav-wrapper">
+  <nav class="nav">
+      <a href="#home" class="nav-item is-active" active-color="orange">Home</a>
+      <a href="#about" class="nav-item" active-color="green">About</a>
+      <a href="#skills" class="nav-item" active-color="cyan" >Skills</a>
+      <a href="#projects" class="nav-item" active-color="blue">Projects</a>
+      <a href="#home" class="nav-item" active-color="red"  data-bs-toggle="modal" data-bs-target="#contactModal">Contact</a>
+      <span class="nav-indicator"></span>
+  </nav>
+</div>
+
+<!-- HERO SECTION -->
+<section class="hero">
+
+  <!-- LEFT -->
+  <div class="hero-text">
+    <h4>Hi, Myself</h4>
+    <h1>YASH</h1>
+    <h2>RAMNANI</h2>
+    <span id="element"></span>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="hero-img-wrap">
+
+    <h3 class="btn icon skills btn-skills"><u>Skills</u></h3>
+
+    <!-- 🔘 Skill Buttons (replace text with icons later) -->
+    <button class="btn icon skill-btn btn-python">
+      <span class="has-tooltip">
+        <i class="fa-brands fa-python"></i>
+        <span class="tooltip">Python</span>
+      </span>    
+    </button>
+
+    <button class="btn icon skill-btn btn-html">
+      <span class="has-tooltip">
+        <i class="fa-brands fa-html5"></i>
+        <span class="tooltip">Html</span>
+      </span>
+    </button>
+    
+    <button class="btn icon skill-btn btn-css">
+      <span class="has-tooltip">
+        <i class="fa-brands fa-css3-alt"></i>
+        <span class="tooltip">CSS</span>
+      </span>
+    </button>
+    
+    <button class="btn icon skill-btn btn-bootstrap">
+      <span class="has-tooltip">
+        <i class="fa-brands fa-bootstrap"></i>
+        <span class="tooltip">Bootstrap</span>
+      </span>
+    </button>
+
+    <button class="btn icon skill-btn btn-java">
+      <span class="has-tooltip">
+        <i class="fa-brands fa-java"></i>
+        <span class="tooltip">Java</span>
+      </span>
+    </button>
+
+    <!-- 👨‍💻 Your image -->
+    <img src="images/developer.png" alt="Developer" class="hero-img"/>
+
+  </div>
+
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="about-section" id="about">
+  <div class="about-container">
+    <h1>About Me</h1>
+    <p>
+      I'm <strong>Yash Ramnani</strong>, a passionate Full Stack Developer focused on building
+      clean, responsive, and scalable web applications.
+      I enjoy turning ideas into real-world products using modern technologies
+      while keeping performance and user experience at the core.
+    </p>
+
+    <div class="about-actions">
+  <a href="mailto:ramnaniyash32@gmail.com" class="about-btn"><i class="fa-solid fa-at"></i> Email Me</a>
+
+  <a href="https://linkedin.com/in/yash-ramnani" 
+     target="_blank" 
+     class="about-btn">
+     <i class="fa-brands fa-linkedin"></i> LinkedIn
+  </a>
+
+  <a href="https://github.com/Yash-Ramnani" 
+     target="_blank" 
+     class="about-btn">
+     <i class="fa-brands fa-github"></i> GitHub
+  </a>
+</div>
+  </div>
+  
+</section>
+
+<!-- SKILLS SECTION -->
+<section class="skills-section" id="skills">
+  <h1>Skills</h1>
+
+  <div class="skills-wrapper">
+
+    <!-- Core Skills -->
+    <div class="skills-block">
+      <h2>Core Skills</h2>
+      <div class="core-skills">
+        <span>Problem Solving</span>
+        <span>Responsive Design</span>
+        <span>Debugging</span>
+        <span>API Integration</span>
+        <span>UI/UX Awareness</span>
+        <span>Team Collaboration</span>
+        <span>Project Management</span>
+      </div>
+    </div>
+
+    <!-- Technical Skills -->
+    <div class="skills-block">
+      <h2>Technical Skills</h2>
+
+      <div class="tech-grid">
+
+        <div class="tech-card">
+          <h3>Frontend</h3>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Bootstrap</li>
+            <li>React.js</li>
+          </ul>
+        </div>
+
+        <div class="tech-card">
+          <h3>Backend</h3>
+          <ul>
+            <li>Node.js</li>
+            <li>Express.js</li>
+            <li>REST APIs</li>
+          </ul>
+        </div>
+
+        <div class="tech-card">
+          <h3>Database</h3>
+          <ul>
+            <li>MongoDB</li>
+          </ul>
+        </div>
+
+        <div class="tech-card">
+          <h3>Tools</h3>
+          <ul>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>Postman</li>
+            <li>VS Code</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS SECTION -->
+<section class="section-2" id="projects">
+
+
+  <br><br><h1>My Projects</h1><br><br>
+
+  <h2>Project-1:Xaviours</h2><br>
+
+  <div class="projects-container column gap-5 d-flex justify-content-center align-items-center flex-column">
+
+    <div class="card text-center cap-2">
+      
+      <div class="video-wrapper">
+        <video class="card-img-top project-video" autoplay muted loop playsinline>
+          <source src="images/Xaviours.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Xaviours Cloth Store</h5>
+        <p class="card-text">Xaviours is a modern clothing store website designed to showcase fashion collections with a clean and stylish layout.  
+                              Built using HTML, CSS, Bootstrap, and JavaScript, it focuses on responsive design and smooth user interaction.</p>
+        <a href="https://yash-ramnani.github.io/Xaviours/Xaviours.html" 
+          class="btn btn-primary me-2" 
+          target="_blank">
+          Live Demo
+        </a>
+
+        <a href="https://github.com/Yash-Ramnani/Xaviours" 
+          class="btn btn-primary" 
+          target="_blank">
+          Source Code
+        </a>
+
+      </div>
+    </div>
+
+    <br><h2>Project-2:Francis</h2>
+
+    <div class="card text-center cap-1">
+      <div class="video-wrapper">
+        <video class="card-img-top project-video" autoplay muted loop playsinline>
+          <source src="images/Francis.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Francis Store</h5>
+        <p class="card-text">Francis Store is a responsive general store website showcasing multiple product categories like groceries and daily essentials.  
+                              Built using HTML, CSS, Bootstrap, and JavaScript, it focuses on clean UI and smooth user experience.</p>
+        <a href="https://yash-ramnani.github.io/Francis-store/Francis.html" 
+          class="btn btn-primary me-2" 
+          target="_blank">
+          Live Demo
+        </a>
+
+        <a href="https://github.com/Yash-Ramnani/Francis-store" 
+          class="btn btn-primary" 
+          target="_blank">
+          Source Code
+        </a>
+
+      </div>
+    </div>
+
+    <br><h2>Project-3:Portfolio</h2>
+
+    <div class="card text-center cap-3">
+      <div class="video-wrapper">
+        <video class="card-img-top project-video" autoplay muted loop playsinline>
+          <source src="images/Portfolio.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Personal Portfolio Website</h5>
+        <p class="card-text">
+          A modern, responsive personal portfolio showcasing my projects, skills, and journey as a BCA student. 
+          Built using HTML, CSS, Bootstrap, and JavaScript, with smooth UI interactions and an integrated AI assistant (Tez) to enhance user engagement.
+        </p>
+
+        <a href="https://yash-ramnani.github.io/My-Portfolio/Portfolio.html" 
+          class="btn btn-primary me-2" 
+          target="_blank">
+          Live Demo
+        </a>
+
+        <a href="https://github.com/Yash-Ramnani/My-Portfolio" 
+          class="btn btn-primary" 
+          target="_blank">
+          Source Code
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+</section>
+
+
+
+</body>
+
+<script src="Portfolio.js"></script>
+
+</html>

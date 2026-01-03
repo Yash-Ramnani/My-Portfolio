@@ -1,0 +1,46 @@
+/* RIGHT IMAGE + BUTTONS */
+.hero-img-wrap {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.hero-img {
+    width: 100%; /* as you want */
+    
+    display: block;
+}
+
+    /* Responsive */
+@media (max-width: 992px) {
+.hero {
+    flex-direction: column;
+    text-align: center;
+}
+
+.hero-img-wrap {
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.hero-img {
+    width: 70%;
+}
+}
+
+.video-wrapper {
+  display: flex;
+  justify-content: center;  /* horizontal center */
+  align-items: center;      /* vertical center */
+}
+
+.project-video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
