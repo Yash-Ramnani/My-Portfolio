@@ -3,9 +3,33 @@
   width: 25%;
 }
 
+@media (max-width: 768px) {
+  #send-btn {
+    width: 30%;
+  }
+}
+
+@media (max-width: 480px) {
+  #send-btn {
+    width: 35%;
+  }
+}
+
 #clear-btn{
 
   width: 25%;
+}
+
+@media (max-width: 768px) {
+  #clear-btn {
+    width: 30%;
+  }
+}
+
+@media (max-width: 480px) {
+  #clear-btn {
+    width: 35%;
+  }
 }
 
 .ai-button,.social-button {
@@ -122,6 +146,36 @@
     transition: 0.3s ease-in-out;
   }
 
+  @media (max-width: 992px) {
+    .skill-btn {
+      font-size: 180%;
+    }
+    
+    .skill-btn:hover {
+      font-size: 220%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .skill-btn {
+      font-size: 140%;
+    }
+    
+    .skill-btn:hover {
+      font-size: 170%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .skill-btn {
+      font-size: 100%;
+    }
+    
+    .skill-btn:hover {
+      font-size: 120%;
+    }
+  }
+
   .skill-btn:hover {
       font-size: 350%;
   }
@@ -132,6 +186,24 @@
     transform: translate(-50%, -50%);
     white-space: nowrap;
     transition: 0.3s ease-in-out;
+  }
+
+  @media (max-width: 992px) {
+    .skills {
+      font-size: 200%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .skills {
+      font-size: 150%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .skills {
+      font-size: 110%;
+    }
   }
 
   /* Circular placement */
@@ -177,6 +249,20 @@ transition: opacity 0.2s ease-in-out,
             transform 0.2s ease-in-out;
 }
 
+@media (max-width: 768px) {
+  .has-tooltip .tooltip {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .has-tooltip .tooltip {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.75rem;
+  }
+}
+
 .has-tooltip:hover .tooltip {
 opacity: 0.9;
 transform: translateX(-50%) translateY(0);
@@ -188,6 +274,21 @@ transform: translateX(-50%) translateY(0);
   display: flex;
   gap: 18px;
   flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .about-actions {
+    margin-top: 25px;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-actions {
+    margin-top: 20px;
+    gap: 10px;
+    flex-direction: column;
+  }
 }
 
 /* Base button */
@@ -202,6 +303,20 @@ transform: translateX(-50%) translateY(0);
   background: transparent;
   color: #00e5ff;
   border-color: #00e5ff;
+}
+
+@media (max-width: 768px) {
+  .about-btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-btn {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .about-btn:hover {
