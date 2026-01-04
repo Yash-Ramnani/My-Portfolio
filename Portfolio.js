@@ -20,7 +20,7 @@ async function sendMessage() {
   showTypingIndicator();
 
   try {
-    const res = await fetch('https://tez-backend-zxzm.onrender.com/chat', {
+    const res = await fetch('/chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ message })
@@ -104,10 +104,39 @@ items.forEach((item, index) => {
     item.classList.contains('is-active') && handleIndicator(item);
 });
 
+// Scroll Spy - Update active nav item based on scroll position
+window.addEventListener('scroll', () => {
+  const sections = document.querySelectorAll('section[id]');
+  const scrollY = window.pageYOffset;
+
+  sections.forEach(section => {
+    const sectionHeight = section.offsetHeight;
+    const sectionTop = section.offsetTop - 150; // offset for navbar
+    const sectionId = section.getAttribute('id');
+    
+    // Check if current scroll position is within this section
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      // Find the corresponding nav item
+      const currentNavItem = document.querySelector(`.nav-item[href="#${sectionId}"]`);
+      
+      if (currentNavItem && !currentNavItem.classList.contains('is-active')) {
+        handleIndicator(currentNavItem);
+      }
+    }
+  });
+  
+  // Handle home section at the very top
+  if (scrollY < 100) {
+    const homeNavItem = document.querySelector('.nav-item[href="#home"]');
+    if (homeNavItem && !homeNavItem.classList.contains('is-active')) {
+      handleIndicator(homeNavItem);
+    }
+  }
+});
+
 // Typed.js Initialization
 var typed = new Typed('#element', {
     strings: ['FULL STACK DEVELOPER.', 'WEB DEVELOPER.', 'AI ENTHUSIAST.', 'TECH LOVER.'],
     loop: true,
     typeSpeed: 100,
-
   });
