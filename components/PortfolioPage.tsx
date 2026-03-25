@@ -661,7 +661,7 @@ export function PortfolioPage() {
         aria-label="Toggle chatbot"
         className="fixed bottom-6 right-5 z-30 inline-flex h-14 w-14 items-center justify-center rounded-full border border-sky-200/40 bg-gradient-to-br from-sky-500 to-cyan-300 text-xl text-slate-950 shadow-neon transition hover:-translate-y-1"
       >
-        AI
+        🤖
       </button>
 
       {chatOpen ? (
