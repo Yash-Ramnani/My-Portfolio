@@ -36,7 +36,7 @@ export const coreSkills = [
 export const techSkills = [
   {
     category: "Frontend",
-    items: ["HTML", "CSS", "JavaScript", "Bootstrap", "React.js"]
+    items: ["Next.js", "TypeScript", "JavaScript","Tailwind CSS", "Bootstrap", "React.js"]
   },
   {
     category: "Backend",
@@ -44,11 +44,11 @@ export const techSkills = [
   },
   {
     category: "Database",
-    items: ["MongoDB"]
+    items: ["MongoDB","MySQL"]
   },
   {
     category: "Tools",
-    items: ["Git", "GitHub", "Postman", "VS Code"]
+    items: ["GitHub","Curl", "Postman", "VS Code","AntiGravity" ]
   }
 ];
 

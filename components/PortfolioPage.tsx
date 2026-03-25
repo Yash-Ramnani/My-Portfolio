@@ -218,8 +218,8 @@ export function PortfolioPage() {
   ];
 
   const chatWindowClass = chatFullscreen
-    ? "fixed inset-2 z-40 flex h-auto w-auto flex-col rounded-2xl border border-sky-100/25 bg-slate-900/95 p-3 shadow-glow backdrop-blur-xl md:inset-6"
-    : "fixed bottom-24 right-4 z-30 flex h-[650px] max-h-[calc(100vh-1rem)] w-[min(92vw,360px)] flex-col rounded-2xl border border-sky-100/25 bg-slate-900/95 p-3 shadow-glow backdrop-blur-xl";
+    ? "fixed inset-2 z-40 flex h-auto w-auto flex-col rounded-2xl border border-sky-100/25 bg-slate-900/95 p-2 shadow-glow backdrop-blur-xl sm:p-3 md:inset-6"
+    : "fixed inset-x-2 bottom-24 z-30 flex h-[min(70vh,520px)] max-h-[calc(100vh-6.75rem)] w-auto flex-col rounded-2xl border border-sky-100/25 bg-slate-900/95 p-2 shadow-glow backdrop-blur-xl sm:inset-x-auto sm:bottom-24 sm:right-4 sm:h-[650px] sm:max-h-[calc(100vh-1rem)] sm:w-[min(92vw,360px)] sm:p-3";
 
   return (
     <main className="mx-auto mb-16 w-[min(1160px,calc(100%-1.25rem))] md:w-[min(1160px,calc(100%-2.2rem))]">
@@ -332,31 +332,31 @@ export function PortfolioPage() {
 
       {contactModalOpen ? (
         <div
-          className="fixed inset-0 z-40 bg-slate-950/75 p-3 backdrop-blur-sm md:p-8"
+          className="fixed inset-0 z-40 bg-slate-950/75 p-2 backdrop-blur-sm sm:p-3 md:p-8"
           onClick={closeContactModal}
         >
           <section
-            className="mx-auto flex h-full w-full max-w-4xl flex-col rounded-2xl border border-sky-100/25 bg-slate-900/95 p-4 shadow-glow md:p-6"
+            className="mx-auto flex h-full max-h-[calc(100vh-1rem)] w-full max-w-4xl flex-col overflow-hidden rounded-2xl border border-sky-100/25 bg-slate-900/95 p-3 shadow-glow sm:p-4 md:p-6"
             onClick={(event) => event.stopPropagation()}
           >
-            <div className="mb-4 flex items-center justify-between gap-3">
-              <h3 className="font-[var(--font-heading)] text-3xl text-slate-100">Contact Yash</h3>
+            <div className="mb-3 flex items-start justify-between gap-2 sm:mb-4 sm:items-center sm:gap-3">
+              <h3 className="font-[var(--font-heading)] text-2xl text-slate-100 sm:text-3xl">Contact Yash</h3>
               <button type="button" onClick={closeContactModal} className={buttonGhost}>
                 Close
               </button>
             </div>
 
-            <div className="grid min-h-0 flex-1 gap-4 lg:grid-cols-[1fr_1.25fr]">
-              <aside className="rounded-xl border border-sky-100/20 bg-slate-950/55 p-4">
+            <div className="grid min-h-0 flex-1 gap-3 overflow-y-auto pr-1 sm:gap-4 sm:pr-2 lg:grid-cols-[1fr_1.25fr]">
+              <aside className="rounded-xl border border-sky-100/20 bg-slate-950/55 p-3 sm:p-4">
                 <p className="mb-3 text-xs uppercase tracking-[0.12em] text-slate-400">Social Links</p>
-                <div className="flex flex-wrap gap-2">
+                <div className="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap">
                   {socialLinks.map((item) => (
                     <a
                       key={item.label}
                       href={item.href}
                       target={item.href.startsWith("http") ? "_blank" : undefined}
                       rel={item.href.startsWith("http") ? "noreferrer" : undefined}
-                      className={buttonPrimary}
+                      className={`${buttonPrimary} w-full sm:w-auto`}
                     >
                       {item.label}
                     </a>
@@ -370,7 +370,7 @@ export function PortfolioPage() {
 
               <form
                 onSubmit={handleContactSubmit}
-                className="flex min-h-0 flex-col gap-3 rounded-xl border border-sky-100/20 bg-slate-950/55 p-4"
+                className="flex min-h-0 w-full flex-col gap-2 rounded-xl border border-sky-100/20 bg-slate-950/55 p-3 sm:gap-3 sm:p-4"
               >
                 <p className="text-xs uppercase tracking-[0.12em] text-slate-400">Send a Message</p>
 
@@ -381,7 +381,7 @@ export function PortfolioPage() {
                     setContactForm((prev) => ({ ...prev, name: event.target.value }))
                   }
                   placeholder="Name"
-                  className="rounded-xl border border-sky-100/25 bg-slate-900/70 px-3 py-2 text-sm text-slate-100 outline-none transition focus:border-sky-300/70"
+                  className="rounded-xl border border-sky-100/25 bg-slate-900/70 px-3 py-2.5 text-sm text-slate-100 outline-none transition focus:border-sky-300/70"
                 />
 
                 <input
@@ -391,7 +391,7 @@ export function PortfolioPage() {
                     setContactForm((prev) => ({ ...prev, email: event.target.value }))
                   }
                   placeholder="Email"
-                  className="rounded-xl border border-sky-100/25 bg-slate-900/70 px-3 py-2 text-sm text-slate-100 outline-none transition focus:border-sky-300/70"
+                  className="rounded-xl border border-sky-100/25 bg-slate-900/70 px-3 py-2.5 text-sm text-slate-100 outline-none transition focus:border-sky-300/70"
                 />
 
                 <input
@@ -401,7 +401,7 @@ export function PortfolioPage() {
                     setContactForm((prev) => ({ ...prev, phone: event.target.value }))
                   }
                   placeholder="Phone Number"
-                  className="rounded-xl border border-sky-100/25 bg-slate-900/70 px-3 py-2 text-sm text-slate-100 outline-none transition focus:border-sky-300/70"
+                  className="rounded-xl border border-sky-100/25 bg-slate-900/70 px-3 py-2.5 text-sm text-slate-100 outline-none transition focus:border-sky-300/70"
                 />
 
                 <textarea
@@ -410,13 +410,13 @@ export function PortfolioPage() {
                     setContactForm((prev) => ({ ...prev, message: event.target.value }))
                   }
                   placeholder="Message"
-                  className="min-h-[160px] flex-1 resize-none rounded-xl border border-sky-100/25 bg-slate-900/70 px-3 py-2 text-sm text-slate-100 outline-none transition focus:border-sky-300/70"
+                  className="h-28 w-full max-w-full resize-none overflow-y-auto rounded-xl border border-sky-100/25 bg-slate-900/70 px-3 py-2.5 text-sm leading-6 text-slate-100 outline-none transition placeholder:text-slate-400 focus:border-sky-300/70 sm:min-h-[160px] sm:resize-y"
                 />
 
                 <button
                   type="submit"
                   disabled={isSubmittingContact}
-                  className={`${buttonPrimary} disabled:cursor-not-allowed disabled:opacity-60`}
+                  className={`${buttonPrimary} w-full sm:w-auto disabled:cursor-not-allowed disabled:opacity-60`}
                 >
                   {isSubmittingContact ? "Sending..." : "Submit"}
                 </button>
@@ -432,7 +432,7 @@ export function PortfolioPage() {
 
       <section
         id="home"
-        className="relative mt-6 grid min-h-[calc(100vh-8.5rem)] items-center gap-6 overflow-hidden rounded-3xl border border-blue-100/20 bg-slate-950/35 p-5 md:min-h-[680px] md:grid-cols-[1.05fr_0.95fr] md:p-10"
+        className="relative mt-6 grid min-h-0 items-center gap-4 overflow-hidden rounded-3xl border border-blue-100/20 bg-slate-950/35 p-4 sm:gap-6 sm:p-5 md:min-h-[680px] md:grid-cols-[1.05fr_0.95fr] md:p-10"
       >
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute inset-0 animate-drift bg-[linear-gradient(rgba(85,145,217,0.10)_1px,transparent_1px),linear-gradient(90deg,rgba(85,145,217,0.10)_1px,transparent_1px)] bg-[size:42px_42px] [mask-image:radial-gradient(circle_at_center,black_38%,transparent_88%)]" />
@@ -441,16 +441,16 @@ export function PortfolioPage() {
           <span className="absolute -bottom-16 right-1/4 h-48 w-48 animate-pulseGlow rounded-full bg-blue-500/40 blur-sm" />
         </div>
 
-        <div className="relative z-10 flex h-full flex-col justify-center gap-8 rounded-2xl bg-slate-900/30 p-5 md:p-8">
+        <div className="relative z-10 flex h-full flex-col justify-center gap-4 rounded-2xl bg-slate-900/30 p-4 sm:gap-6 sm:p-5 md:gap-8 md:p-8">
           <div>
-            <p className="mb-3 text-lg uppercase tracking-[0.14em] text-slate-300 md:text-base">Hi, Myself</p>
-            <h1 className="font-[var(--font-heading)] text-[clamp(3rem,11vw,7.6rem)] leading-[0.92] text-slate-100">
+            <p className="mb-2 text-sm uppercase tracking-[0.14em] text-slate-300 sm:mb-3 sm:text-base">Hi, I&apos;m</p>
+            <h1 className="font-[var(--font-heading)] text-[clamp(2.45rem,14vw,7.6rem)] leading-[0.9] text-slate-100 sm:leading-[0.92]">
               YASH
               <span className="block bg-gradient-to-r from-sky-300 via-slate-100 to-cyan-300 bg-clip-text text-transparent">
                 RAMNANI
               </span>
             </h1>
-            <p className="mt-5 min-h-8 text-sm uppercase tracking-[0.11em] text-slate-300 md:text-lg">
+            <p className="mt-4 min-h-8 text-xs uppercase tracking-[0.11em] text-slate-300 sm:text-sm md:mt-5 md:text-lg">
               {typedText}
               <span className="animate-blink text-sky-300">|</span>
             </p>
@@ -466,7 +466,7 @@ export function PortfolioPage() {
           </div>
         </div>
 
-        <div className="relative z-10 flex items-center justify-center md:justify-end">
+        <div className="relative z-10 hidden items-center justify-center md:flex md:justify-end">
           <Image
             src="/images/developer.png"
             alt="Developer"
@@ -668,11 +668,11 @@ export function PortfolioPage() {
         <section className={chatWindowClass}>
           <div className="mb-2 flex items-center justify-between gap-2">
             <h3 className="font-[var(--font-heading)] text-2xl text-slate-100">Tez</h3>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1.5 sm:gap-2">
               <button
                 type="button"
                 onClick={() => setChatFullscreen((prev) => !prev)}
-                className="rounded-lg border border-sky-200/30 px-2 py-1 text-xs uppercase tracking-[0.1em] text-slate-200 transition hover:bg-slate-800"
+                className="rounded-lg border border-sky-200/30 px-2 py-1 text-[10px] uppercase tracking-[0.1em] text-slate-200 transition hover:bg-slate-800 sm:text-xs"
               >
                 {chatFullscreen ? "Window" : "Full"}
               </button>
@@ -682,7 +682,7 @@ export function PortfolioPage() {
                   setChatOpen(false);
                   setChatFullscreen(false);
                 }}
-                className="rounded-lg border border-sky-200/30 px-2 py-1 text-xs uppercase tracking-[0.1em] text-slate-200 transition hover:bg-slate-800"
+                className="rounded-lg border border-sky-200/30 px-2 py-1 text-[10px] uppercase tracking-[0.1em] text-slate-200 transition hover:bg-slate-800 sm:text-xs"
               >
                 Close
               </button>
@@ -698,31 +698,31 @@ export function PortfolioPage() {
                 key={`${msg.role}-${index}`}
                 className={`rounded-xl px-3 py-2 text-sm leading-6 ${
                   msg.role === "assistant"
-                    ? "mr-8 border border-sky-200/20 bg-slate-900/80 text-slate-100"
-                    : "ml-8 border border-cyan-200/35 bg-cyan-400/15 text-cyan-100"
+                    ? "mr-3 border border-sky-200/20 bg-slate-900/80 text-slate-100 sm:mr-8"
+                    : "ml-3 border border-cyan-200/35 bg-cyan-400/15 text-cyan-100 sm:ml-8"
                 }`}
               >
                 {msg.text}
               </div>
             ))}
             {isSending ? (
-              <div className="mr-8 rounded-xl border border-sky-200/20 bg-slate-900/80 px-3 py-2 text-sm text-slate-300">
+              <div className="mr-3 rounded-xl border border-sky-200/20 bg-slate-900/80 px-3 py-2 text-sm text-slate-300 sm:mr-8">
                 Tez is typing...
               </div>
             ) : null}
           </div>
 
-          <form onSubmit={sendMessage} className="mt-3 flex shrink-0 gap-2">
+          <form onSubmit={sendMessage} className="mt-3 flex shrink-0 flex-col gap-2 sm:flex-row">
             <input
               value={chatInput}
               onChange={(event) => setChatInput(event.target.value)}
               placeholder="Type your message"
-              className="min-w-0 flex-1 rounded-xl border border-sky-100/25 bg-slate-950/60 px-3 py-2 text-sm text-slate-100 outline-none transition focus:border-sky-300/70"
+              className="min-w-0 flex-1 rounded-xl border border-sky-100/25 bg-slate-950/60 px-3 py-2.5 text-sm text-slate-100 outline-none transition focus:border-sky-300/70"
             />
             <button
               type="submit"
               disabled={isSending}
-              className={`${buttonPrimary} disabled:cursor-not-allowed disabled:opacity-60`}
+              className={`${buttonPrimary} w-full sm:w-auto disabled:cursor-not-allowed disabled:opacity-60`}
             >
               Send
             </button>
