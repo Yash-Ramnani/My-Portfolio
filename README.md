@@ -1,63 +1,61 @@
-# My Portfolio 🚀
+# Yash Portfolio (Next.js)
 
-Welcome to my personal portfolio repository!  
-This project showcases my skills, projects, and professional journey in a clean, responsive, and interactive way.
+Modern, luxury-styled portfolio rebuilt with Next.js App Router and TypeScript.
 
-🌐 **Live Demo:** [View Portfolio](https://yash-ramnani.github.io/My-Portfolio)
+Live content was migrated from:
+https://my-portfolio-six-alpha-81.vercel.app/Portfolio.html
 
----
+## Features
 
-## ✨ Features
+- Next.js App Router architecture with reusable components and custom hooks.
+- Fully preserved portfolio sections: Hero, About Me, Skills, Projects, Experience, Contact.
+- Default dark theme with neon blue, silver, and gradient accents.
+- Premium typography using Poppins (body) and Cormorant Garamond (headings).
+- Glassmorphism cards, interactive project cards, and smooth motion effects.
+- Futuristic animated hero background.
+- Responsive desktop/mobile layouts.
+- Production-ready static assets for videos, profile image, and resume.
 
-- **Responsive Design**: Works seamlessly across devices (desktop, tablet, mobile).
-- **AI Assistant Button** 🤖  
-  - Provides answers to user queries.  
-  - Remembers the current conversation for a more interactive experience.
-- **Contact Section**: Easy access to connect with me.  
-  - GitHub button  
-  - LinkedIn button  
-- **About Section**: A quick overview of who I am and what I do.
-- **Skills Section**: Highlights my technical expertise and tools I work with.
-- **Projects Section**: Showcases selected projects with details and links.
+## Tech Stack
 
----
+- Next.js
+- React
+- TypeScript
+- CSS (custom design system)
 
-## 🛠️ Tech Stack
+## Local Development
 
-- **Frontend**: HTML, CSS, JavaScript  
-- **Responsive Design**: Media queries & modern CSS practices  
-- **AI Integration**: Custom JavaScript logic for conversational memory  
-- **Deployment**: GitHub Pages  
+1. Install dependencies:
 
----
+  npm install
 
+2. Start the dev server:
 
----
+  npm run dev
 
-## 🚀 Deployment
+3. Open:
 
-This portfolio is deployed using **GitHub Pages**.  
-To view or update:
-1. Push changes to the `main` branch.
-2. GitHub Pages automatically updates the live site.
+  http://localhost:3000
 
----
+## Production Build
 
-## 📬 Contact
+Run:
 
-- **Portfolio**: [yash-ramnani.github.io/My-Portfolio](https://yash-ramnani.github.io/My-Portfolio)  
-- **GitHub**: [Yash-Ramnani](https://github.com/Yash-Ramnani)  
-- **LinkedIn**: [Yash Ramnani](https://www.linkedin.com/in/yash-ramnani/)  
+npm run build
+npm run start
 
----
+## Deploy on Vercel
 
-## 📜 License
+1. Push this repository to GitHub.
+2. Import the repository in Vercel.
+3. Keep defaults (Framework Preset: Next.js).
+4. Deploy.
 
-This project is licensed under the MIT License – feel free to use and adapt it for your own portfolio.
+No extra build configuration is required.
 
----
+## Contact
 
-⭐ If you like this project, consider giving it a star on GitHub!
-
-
-## 📂 Repository Structure
+- Portfolio: https://my-portfolio-six-alpha-81.vercel.app/Portfolio.html
+- GitHub: https://github.com/Yash-Ramnani
+- LinkedIn: https://linkedin.com/in/yash-ramnani
+- Email: ramnaniyash32@gmail.com
