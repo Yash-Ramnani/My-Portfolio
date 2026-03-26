@@ -142,7 +142,7 @@ export const contact = {
   linkedin: "https://linkedin.com/in/yash-ramnani",
   github: "https://github.com/Yash-Ramnani",
   whatsapp: "https://wa.me/918780486871",
-  resume: "/assets/Yash_Ramnani_Resume.pdf",
+  resume: "/assets/YashResume.pdf",
   location: "India",
   remote: "Open to remote opportunities"
 };
