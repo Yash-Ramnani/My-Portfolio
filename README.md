@@ -3,7 +3,7 @@
 Modern, luxury-styled portfolio rebuilt with Next.js App Router and TypeScript.
 
 Live content was migrated from:
-https://my-portfolio-six-alpha-81.vercel.app/Portfolio.html
+[https://yashramnani.vercel.app/](https://yashramnani.vercel.app/)
 
 ## Features
 
@@ -55,7 +55,7 @@ No extra build configuration is required.
 
 ## Contact
 
-- Portfolio: https://my-portfolio-six-alpha-81.vercel.app/Portfolio.html
+- Portfolio: [https://yashramnani.vercel.app/](https://yashramnani.vercel.app/)
 - GitHub: https://github.com/Yash-Ramnani
 - LinkedIn: https://linkedin.com/in/yash-ramnani
 - Email: ramnaniyash32@gmail.com
